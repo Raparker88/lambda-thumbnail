@@ -32,7 +32,6 @@ jobs:
           python-version: '3.11'
       
       - name: Install dependencies and create deployment package
-        working-directory: lambda-thumbnail
         run: |
           # Install dependencies to a package directory
           pip install -r requirements.txt -t package/
