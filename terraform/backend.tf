@@ -5,7 +5,7 @@ terraform {
   backend "s3" {
     bucket         = "rock-of-ages-terraform-state-rap"  # You'll create this bucket
     key            = "lambda-thumbnail/terraform.tfstate"
-    region         = "us-east-1"
+    region         = "us-east-2"
     dynamodb_table = "rock-of-ages-terraform-locks"  # You'll create this table
     encrypt        = true
   }

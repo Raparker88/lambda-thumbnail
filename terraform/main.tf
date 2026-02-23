@@ -90,11 +90,6 @@ resource "aws_lambda_function" "thumbnail_generator" {
   filename         = "../deployment-package.zip"
   source_code_hash = filebase64sha256("../deployment-package.zip")
 
-  # Pillow layer (AWS provides this)
-  layers = [
-    "arn:aws:lambda:${var.aws_region}:770693421928:layer:Klayers-p311-pillow:1"
-  ]
-
   environment {
     variables = {
       THUMBNAIL_SIZES = "small,medium,large"
